@@ -4,14 +4,14 @@ public class TextFieldB extends TextField {
 
     String text;
 
-    public TextFieldB() {
-        this.text = "TEXTFIELD";
+    public TextFieldB(String text) {
+        this.text = text;
     }
 
     @Override
     public void display() {
 
-        if (text.equals("TEXTFIELD")) {
+        if (text.equals("textfield")) {
             System.out.println("This is Button B");
         }else{
             System.out.println("Changing Button text");

@@ -4,8 +4,6 @@ public abstract class Button {
 
     protected String text;
     public abstract void display();
+    public abstract void setText(String text);
 
-    public void setText(String text){
-        this.text = text;
-    }
 }

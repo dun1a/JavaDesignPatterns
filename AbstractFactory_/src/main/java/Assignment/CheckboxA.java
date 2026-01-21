@@ -4,10 +4,9 @@ public class CheckboxA extends CheckBox {
 
     String text;
 
-    public CheckboxA() {
-        this.text = "X";
+    public CheckboxA(String text) {
+        this.text = text;
     }
-
 
     @Override
     public void display() {
@@ -18,10 +17,9 @@ public class CheckboxA extends CheckBox {
         }
 
         String checkbox = ".....\n"
-                        + ". " + text + " .\n"
+                        + "| " + text + " |\n"
                         + ".....";
         System.out.println(checkbox);
-
     }
 
     public void setText(String text) {

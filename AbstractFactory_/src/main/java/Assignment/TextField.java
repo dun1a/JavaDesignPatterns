@@ -3,10 +3,7 @@ package Assignment;
 public abstract class TextField {
 
     protected String text;
-
     public abstract void display();
+    public abstract void setText(String text);
 
-    public void setText(String text){
-        this.text = text;
-    }
 }

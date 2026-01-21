@@ -2,18 +2,18 @@ package Assignment;
 
 public class StarFactory extends UIFactory{
     @Override
-    public Button createButton() {
-        return new ButtonB();
+    public Button createButton(String text) {
+        return new ButtonB(text);
     }
 
     @Override
-    public TextField createTextField() {
-        return new TextFieldB();
+    public TextField createTextField(String text) {
+        return new TextFieldB(text);
     }
 
     @Override
-    public CheckBox createCheckBox() {
-        return new CheckboxB();
+    public CheckBox createCheckBox(String text) {
+        return new CheckboxB(text);
     }
 
 }

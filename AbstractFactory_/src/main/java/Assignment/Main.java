@@ -6,22 +6,17 @@ public class Main {
 
         UIFactory factory = new StarFactory();
 
-        CheckBox checkBox = factory.createCheckBox();
-
-        TextField textField = factory.createTextField();
-
-
-        Button button = factory.createButton();
+        Button button = factory.createButton("BUTTON");
         button.display();
         button.setText("PRESS");
         button.display();
 
-        factory.createCheckBox();
+        CheckBox checkBox = factory.createCheckBox("X");
         checkBox.display();
         checkBox.setText("0");
         checkBox.display();
 
-        factory.createTextField();
+        TextField textField = factory.createTextField("textfield");
         textField.display();
         textField.setText("something");
         textField.display();

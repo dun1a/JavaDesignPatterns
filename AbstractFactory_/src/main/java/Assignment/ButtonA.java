@@ -4,8 +4,8 @@ public class ButtonA extends Button{
 
     String text;
 
-    public ButtonA(){
-        this.text = "BUTTON";
+    public ButtonA(String text){
+        this.text = text;
     }
 
     @Override
@@ -16,7 +16,7 @@ public class ButtonA extends Button{
             System.out.println("Changing Button text");
         }
         String button = "............\n"
-                      + ". " + text + "   .\n"
+                      + "| " + text + "   |\n"
                       + "............";
         System.out.println(button);
     }

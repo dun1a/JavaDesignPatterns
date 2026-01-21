@@ -4,8 +4,8 @@ public class ButtonB extends Button{
 
     String text;
 
-    public ButtonB(){
-        this.text = "BUTTON";
+    public ButtonB(String text){
+        this.text = text;
     }
 
     @Override

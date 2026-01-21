@@ -4,8 +4,8 @@ public class CheckboxB extends CheckBox{
 
     String text;
 
-    public CheckboxB() {
-        this.text = "X";
+    public CheckboxB(String text) {
+        this.text = text;
     }
 
     @Override

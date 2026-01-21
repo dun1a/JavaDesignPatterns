@@ -2,9 +2,11 @@ package Assignment;
 
 public abstract class UIFactory {
 
-    public abstract Button createButton();
-    public abstract TextField createTextField();
-    public abstract CheckBox createCheckBox();
+    String text;
+    public abstract Button createButton(String text);
+    public abstract TextField createTextField(String Text);
+    public abstract CheckBox createCheckBox(String Text);
+
 
 
 }

@@ -4,14 +4,13 @@ public class TextFieldA extends TextField{
 
     String text;
 
-
-    public TextFieldA() {
-        this.text = "TEXTFIELD";
+    public TextFieldA(String text) {
+        this.text = text;
     }
 
     @Override
     public void display() {
-        if (text.equals("BUTTON")) {
+        if (text.equals("textfield")) {
             System.out.println("This is Checkbox A");
         }else{
             System.out.println("Changing TextField text");
@@ -19,7 +18,7 @@ public class TextFieldA extends TextField{
 
 
         String textfield = ".............\n"
-                         + ". " + text + " .\n"
+                         + "| " + text + " |\n"
                          + ".............";
         System.out.println(textfield);
     }
