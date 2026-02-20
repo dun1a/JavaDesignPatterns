@@ -1,0 +1,8 @@
+package Assignment;
+
+public abstract class Printer {
+
+    public void print(String message) {
+        System.out.println(message);
+    }
+}

@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/Observer/pom.xml" />
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
         <option value="$PROJECT_DIR$/Singleton/pom.xml" />
+        <option value="$PROJECT_DIR$/Decorator/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
