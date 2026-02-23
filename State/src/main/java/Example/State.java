@@ -1,0 +1,16 @@
+package Example;
+import java.util.Scanner;
+
+public abstract class State {
+    private Machine machine;
+
+    public State(Machine machine) {
+        this.machine = machine;
+    }
+
+    public Machine getMachine() {
+        return machine;
+    }
+
+    protected abstract void action();
+}
