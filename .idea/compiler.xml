@@ -11,6 +11,7 @@
         <module name="Singleton" />
         <module name="State" />
         <module name="Observer" />
+        <module name="Template" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
