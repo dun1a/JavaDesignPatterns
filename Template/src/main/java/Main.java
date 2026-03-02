@@ -1,9 +1,4 @@
-import Assignment.RPSGame;
-import Example.CoffeeRecipe;
-import Example.EspressoRecipe;
-import Example.LatteRecipe;
-
-import java.sql.SQLOutput;
+import Assignment.NumGuessingGame;
 
 public class Main {
 
@@ -19,7 +14,7 @@ public class Main {
 //            latteMachine.makeCoffee();
 
 
-            RPSGame game = new RPSGame();
+            NumGuessingGame game = new NumGuessingGame();
             game.play(2);
 
         }

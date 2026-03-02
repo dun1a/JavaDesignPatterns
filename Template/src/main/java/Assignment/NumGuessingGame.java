@@ -3,7 +3,7 @@ package Assignment;
 import java.util.Scanner;
 
 
-public class RPSGame extends Game {
+public class NumGuessingGame extends Game {
 
     Scanner scanner = new Scanner(System.in);
 
