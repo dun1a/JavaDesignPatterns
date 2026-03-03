@@ -15,7 +15,8 @@ public class ExpertState extends LevelState {
             case 1:
                 getGameCharacter().train();
                 if(getGameCharacter().getExperiencePoints() >= 50) {
-                    System.out.println("User has gained 40 XP, you will level up to Master level!");
+                    System.out.println("User has gained 50 XP, you will level up to Master level!");
+                    this.getGameCharacter().setState(new MasterState(this.getGameCharacter()));
                     break;
                 }
             case 2:

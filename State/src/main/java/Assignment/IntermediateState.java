@@ -16,15 +16,19 @@ public class IntermediateState extends LevelState {
             case 1:
                 getGameCharacter().train();
                 if(getGameCharacter().getExperiencePoints() >= 20) {
-                    System.out.println("User has gained 20 XP, you will level up to Intermediate level!");
+                    System.out.println("User has gained 20 XP, you will level up to Expert level!");
                     this.getGameCharacter().setState(new ExpertState(this.getGameCharacter()));
                     break;
                 }
 
             case 2:
-                getGameCharacter().meditate();
-                break;
+
+                if(choice == 2) {
+                    getGameCharacter().meditate();
+                    break;
+                }
         }
+
 
     }
 }

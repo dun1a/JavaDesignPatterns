@@ -37,7 +37,7 @@ public class GameCharacter {
     }
 
     public void train(){
-        experiencePoints += 3;
+        experiencePoints += 2;
         System.out.println("Training... Current XP: " + experiencePoints);
     }
 
