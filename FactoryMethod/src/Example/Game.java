@@ -2,6 +2,8 @@ package Example;
 
 import java.util.Scanner;
 
+// is the abstract creator class in the factory method pattern,
+// it defines the factory method (createRoom()) that must be implemented by its subclasses to create specific
 public abstract class Game {
 
     // main game loop
@@ -17,6 +19,7 @@ public abstract class Game {
         } while(!scanner.nextLine().equals("q"));
     }
 
+    // factory method
     // any subclass of the parent class Game MUST implement createRoom();
     public abstract Room createRoom();
 
