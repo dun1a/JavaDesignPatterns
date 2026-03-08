@@ -1,5 +1,8 @@
 package Assignment;
 
+// concrete product
+// concrete class for button A (dot style button)
+
 public class ButtonA extends Button{
 
     String text;

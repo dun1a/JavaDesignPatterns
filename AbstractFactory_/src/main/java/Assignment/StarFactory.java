@@ -1,5 +1,11 @@
 package Assignment;
 
+
+// concrete factory
+// factory for star style
+// creates star style buttons, text fields and checkboxes
+// each factory creates a family of related products (star style UI components)
+
 public class StarFactory extends UIFactory{
     @Override
     public Button createButton(String text) {

@@ -1,5 +1,10 @@
 package Assignment;
 
+// concrete factory
+// implements creation of concrete products in the chosen family
+// factory for dot style
+// creates dot style buttons, text fields and checkboxes
+// each factory creates a family of related products (dot style UI components)
 
 public class DotFactory extends UIFactory {
 
