@@ -1,17 +1,18 @@
 import Assignment.NumGuessingGame;
+import Example.*;
 
 public class Main {
 
         public static void main(String[] args) {
 
 
-//            System.out.println("Making espresso...");
-//            CoffeeRecipe espressoMachine = new EspressoRecipe();
-//            espressoMachine.makeCoffee();
-//
-//            System.out.println("\nMaking Latte...");
-//            CoffeeRecipe latteMachine = new LatteRecipe();
-//            latteMachine.makeCoffee();
+            System.out.println("Making espresso...");
+            CoffeeRecipe espressoMachine = new EspressoRecipe();
+            espressoMachine.makeCoffee();
+
+            System.out.println("\nMaking Latte...");
+            CoffeeRecipe latteMachine = new LatteRecipe();
+            latteMachine.makeCoffee();
 
 
             NumGuessingGame game = new NumGuessingGame();

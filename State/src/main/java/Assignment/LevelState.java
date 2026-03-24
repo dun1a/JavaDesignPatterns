@@ -2,7 +2,7 @@ package Assignment;
 
 public abstract class LevelState {
 
-    private GameCharacter gameCharacter;
+    private GameCharacter gameCharacter; // has reference/instance variable to the GameCharacter
 
     public LevelState(GameCharacter gamecharacter){
         this.gameCharacter = gamecharacter;
