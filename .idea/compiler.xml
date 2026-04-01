@@ -13,6 +13,7 @@
         <module name="Singleton" />
         <module name="State" />
         <module name="Observer" />
+        <module name="Builder" />
         <module name="Strategy" />
         <module name="AbstractFactory_" />
         <module name="ChainOfResponsibility" />
