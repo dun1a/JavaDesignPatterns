@@ -14,7 +14,7 @@ public class Model {
 
     private boolean isSelected;
 
-    public void setOption(int optionNumber, int choice){
+    public void setOption(int optionNumber, int choice, String time){
         System.out.println("optionNumber: " + optionNumber + " choice: " + choice + " time: ");
         if (optionNumber >= 1 && optionNumber <= 3){
             options[optionNumber - 1] = choice;

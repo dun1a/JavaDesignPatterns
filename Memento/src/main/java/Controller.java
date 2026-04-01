@@ -21,9 +21,9 @@ public class Controller {
         this.history = new ArrayList<>();
     }
 
-    public void setOption(int optionNumber, int choice){
+    public void setOption(int optionNumber, int choice, String time){
         saveToHistory();
-        model.setOption(optionNumber, choice);
+        model.setOption(optionNumber, choice, time);
     }
 
     public int getOption(int optionNumber){
@@ -90,6 +90,7 @@ public class Controller {
     private void saveToHistory(){
         IMemento currentState = model.createMemento();
         System.out.println("Saving current state to history " + currentState);
+        time = ((Memento) currentState).getSavedTime();
         history.add(currentState);
         allHistory.add(currentState);
         redoHistory.clear(); // Clear redo history when a new action is taken
