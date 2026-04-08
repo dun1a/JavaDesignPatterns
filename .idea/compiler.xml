@@ -19,6 +19,7 @@
         <module name="Strategy" />
         <module name="AbstractFactory_" />
         <module name="ChainOfResponsibility" />
+        <module name="Bridge" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
