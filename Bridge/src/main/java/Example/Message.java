@@ -6,7 +6,7 @@ package Example;
 public abstract class Message {
 
     // has a reference to the implementor object
-    private MessageImp messageImp; // this lets us delegte the implementation of the methods to the desired implementation interface
+    private MessageImp messageImp; // this lets us delegate the implementation of the methods to the desired implementation interface
     // makes it possible to change implementation of the message system without changing the abstraction
 
     public Message(MessageImp messageImp){

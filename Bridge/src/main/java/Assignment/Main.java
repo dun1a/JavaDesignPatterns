@@ -6,15 +6,18 @@ public class Main {
 
         ColorImp colorImp = new Purple();
         Shape shape = new Square(colorImp);
-        System.out.println(shape.draw());
+        shape.draw();
 
         colorImp = new Blue();
         shape = new Triangle(colorImp);
-        System.out.println(shape.draw());
+        shape.draw();
 
-        colorImp = new ChangeColor();
-        shape = new Triangle(colorImp);
-        ((ChangeColor) colorImp).setColor("Green");
-        System.out.println(shape.draw());
+//        colorImp = new ChangeColor();
+//        ((ChangeColor) colorImp).setColor("red");
+//        shape.draw();
+
+        colorImp = new Purple();
+        shape = new Rectangle(colorImp, 12, 5);
+        shape.draw();
     }
 }

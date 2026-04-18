@@ -3,6 +3,7 @@ package Assignment;
 public abstract class Shape {
 
     private ColorImp colorImp;
+    private String name;
 
     public Shape(ColorImp colorImp){
         this.colorImp = colorImp;
@@ -12,7 +13,8 @@ public abstract class Shape {
         return colorImp;
     }
 
-    public String draw(){
-        return colorImp.fill(); // this is what gets added after the shape has been drawn
+    public void draw(){
+        System.out.println(colorImp.fill());
+       // return colorImp.fill(); // this is what gets added after the shape has been drawn
     }
 }

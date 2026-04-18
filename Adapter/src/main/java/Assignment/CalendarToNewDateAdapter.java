@@ -13,43 +13,40 @@ public class CalendarToNewDateAdapter implements NewDateInterface {
 
     public CalendarToNewDateAdapter(Calendar calendar) {
         this.calendar = calendar;
-//        this.day = calendar.get(Calendar.DAY_OF_MONTH);
-//        this.month = calendar.get(Calendar.MONTH) + 1; // Calendar.MONTH is zero-based
-//        this.year = calendar.get(Calendar.YEAR);
-
     }
+
     @Override
     public void setDay(int day) {
-        this.day = day;
+        calendar.set(Calendar.DATE, day);
     }
 
     @Override
     public void setMonth(int month) {
-        this.month = month;
+        calendar.set(Calendar.MONTH, month - 1); // Calendar months are 0-based
     }
 
     @Override
     public void setYear(int year) {
-        this.year = year;
+        calendar.set(Calendar.YEAR, year);
     }
 
     @Override
     public int getDay() {
-        return day;
+        return calendar.get(Calendar.DATE);
     }
 
     @Override
     public int getMonth() {
-        return month;
+        return calendar.get(Calendar.MONTH) + 1; // Calendar months are 0-based
     }
 
     @Override
     public int getYear() {
-        return year;
+        return calendar.get(Calendar.YEAR);
     }
 
     @Override
     public void advanceDays(int days) {
-        this.day += days;
+        calendar.add(Calendar.DATE, days);
     }
 }
