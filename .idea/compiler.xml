@@ -17,6 +17,7 @@
         <module name="State" />
         <module name="Observer" />
         <module name="Strategy" />
+        <module name="Mediator" />
         <module name="AbstractFactory_" />
         <module name="ChainOfResponsibility" />
         <module name="Bridge" />
