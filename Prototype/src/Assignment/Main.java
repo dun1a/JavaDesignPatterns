@@ -1,5 +1,7 @@
 package Assignment;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -9,14 +11,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         //String[] choice = {"1. Look at lists","2. Edit list"};
 
+        List<Recommendation> recommendationsList = new ArrayList<>();
+
         Book book1 = new Book("Eiichiro Oda", "One Piece", "Adventure");
         Book book2 = new Book("Miyuki Abe", "Hakkenden", "Fantasy");
         Book book3 = new Book("Shuichi Aso", "Disastrous Life of Saiki K", "Comedy");
         Book book4 = new Book("Katsura Hoshino", "D.Gray-man", "Action");
 
-        System.out.println("Choose an option:");
-        System.out.println("1. Look at lists");
-        System.out.println("2. Edit list");
 
         Recommendation recommendation1 = new Recommendation("Teenagers");
         recommendation1.addBook(book1);
@@ -27,64 +28,113 @@ public class Main {
         recommendation2.addBook(book3);
         recommendation2.addBook(book4);
 
+        recommendationsList.add(recommendation1);
+        recommendationsList.add(recommendation2);
 //        System.out.println("Original recommendation: " + recommendation1);
 //        System.out.println("Cloned recommendation: " + recommendation2);
 
-
+        System.out.println("Choose an option:");
+        System.out.println("1. Look at lists");
+        System.out.println("2. Edit list");
+        System.out.println("0. Exit");
         int option = scanner.nextInt();
-        switch(option){
-            case 1:
-                System.out.println("Original recommendation: " + recommendation1);
-                System.out.println("Cloned recommendation: " + recommendation2);
-                break;
-
-            case 2:
-                System.out.println("Would you like to clone the original recommendation? (yes/no)");
-
-                if(scanner.next().equalsIgnoreCase("yes")){
-                    Recommendation newRecommendation = recommendation1.clone();
-
-                    System.out.println("Would you like to add or remove books? (add/remove/no)");
-                    String action = scanner.next();
-
-                    if(action.equalsIgnoreCase("add")){
-                        scanner.nextLine(); // clear buffer
-
-                        System.out.println("Enter author:");
-                        String author = scanner.nextLine();
-
-                        System.out.println("Enter title:");
-                        String title = scanner.nextLine();
-
-                        System.out.println("Enter genre:");
-                        String genre = scanner.nextLine();
-
-                        Book newBook = new Book(author, title, genre);
-                        newRecommendation.addBook(newBook);
-
-                        System.out.println("Modified list: " + newRecommendation);
-
-                    } else if(action.equalsIgnoreCase("remove")){
-                        System.out.println("Enter book title to remove:");
-                        scanner.nextLine();
-                        String titleToRemove = scanner.next();
-
-                        newRecommendation.getBooks()
-                                .removeIf(book -> book.getTitle().equalsIgnoreCase(titleToRemove));
-
-                        System.out.println("Modified list:\n " + newRecommendation);
-
-                    } else {
-                        System.out.println("No changes made.");
+        while (option != 0) {
+            switch (option) {
+                case 1:
+                    for (Recommendation recommendation : recommendationsList) {
+                        System.out.println(recommendation);
                     }
-                } else {
-                    System.out.println("No cloning performed.");
-                }
-                break;
+//                System.out.println("Original recommendation: " + recommendation1);
+//                System.out.println("Cloned recommendation: " + recommendation2);
+                    break;
+                case 2:
+                    System.out.println("Would you like to clone the original recommendation? (yes/no)");
 
-            default:
-                System.out.println("Invalid option. Please choose 1 or 2.");
+                    if (scanner.next().equalsIgnoreCase("yes")) {
+                        Recommendation newRecommendation = recommendation1.clone();
+
+                        System.out.println("Would you like to add or remove books? (add/remove/no)");
+                        String action = scanner.next();
+
+                        if (action.equalsIgnoreCase("add")) {
+                            scanner.nextLine(); // clear buffer
+
+                            System.out.println("Enter author:");
+                            String author = scanner.nextLine();
+
+                            System.out.println("Enter title:");
+                            String title = scanner.nextLine();
+
+                            System.out.println("Enter genre:");
+                            String genre = scanner.nextLine();
+
+                            Book newBook = new Book(author, title, genre);
+                            newRecommendation.addBook(newBook);
+                            recommendationsList.add(newRecommendation);
+
+                            System.out.println("Modified list: " + newRecommendation);
+
+                        } else if (action.equalsIgnoreCase("remove")) {
+                            System.out.println("Enter book title to remove:");
+                            scanner.nextLine();
+                            String titleToRemove = scanner.nextLine();
+
+                            newRecommendation.getBooks()
+                                    .removeIf(book -> book.getTitle().equalsIgnoreCase(titleToRemove));
+
+                            System.out.println("Modified list:\n " + newRecommendation);
+
+                        } else {
+                            System.out.println("No changes made.");
+                        }
+                    } else {
+                        System.out.println("Using original recommendation without cloning.");
+
+                        System.out.println("Would you like to add or remove books? (add/remove/no)");
+                        String action = scanner.next();
+
+                        if (action.equalsIgnoreCase("add")) {
+                            scanner.nextLine(); // clear buffer
+
+                            System.out.println("Enter author:");
+                            String author = scanner.nextLine();
+
+                            System.out.println("Enter title:");
+                            String title = scanner.nextLine();
+
+                            System.out.println("Enter genre:");
+                            String genre = scanner.nextLine();
+
+                            Book newBook = new Book(author, title, genre);
+                            recommendation1.addBook(newBook);
+                            recommendationsList.add(recommendation1);
+
+                            System.out.println("Modified list: " + recommendation1);
+
+                        } else if (action.equalsIgnoreCase("remove")) {
+                            System.out.println("Enter book title to remove:");
+                            scanner.nextLine();
+                            String titleToRemove = scanner.nextLine();
+
+                            recommendation1.getBooks()
+                                    .removeIf(book -> book.getTitle().equalsIgnoreCase(titleToRemove));
+
+                            System.out.println("Modified list:\n " + recommendation1);
+
+                        } else {
+                            System.out.println("No changes made.");
+                        }
+                    }
+                    break;
+
+                default:
+                    System.out.println("Invalid option. Please choose 1 or 2.");
+            }
+            System.out.println("Choose an option:");
+            System.out.println("1. Look at lists");
+            System.out.println("2. Edit list");
+            System.out.println("0. Exit");
+            option = scanner.nextInt();
         }
-
     }
 }
