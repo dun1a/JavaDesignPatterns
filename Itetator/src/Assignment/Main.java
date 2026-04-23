@@ -1,0 +1,18 @@
+package Assignment;
+
+import java.util.Iterator;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        SequenceInterface sequence = new FibonacciSequence();
+
+        Iterator<Integer> iterator = sequence.iterator();
+        for (int i = 0; i < 20; i++) {
+            System.out.println(iterator.next());
+        }
+    }
+
+
+}
