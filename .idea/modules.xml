@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Composite/Composite.iml" filepath="$PROJECT_DIR$/Composite/Composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Facade/Facade.iml" filepath="$PROJECT_DIR$/Facade/Facade.iml" />
       <module fileurl="file://$PROJECT_DIR$/FactoryMethod/FactoryMethod.iml" filepath="$PROJECT_DIR$/FactoryMethod/FactoryMethod.iml" />
       <module fileurl="file://$PROJECT_DIR$/Itetator/Itetator.iml" filepath="$PROJECT_DIR$/Itetator/Itetator.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaDesignPatterns.iml" filepath="$PROJECT_DIR$/JavaDesignPatterns.iml" />
