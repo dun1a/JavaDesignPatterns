@@ -14,13 +14,10 @@ public class Facade implements FacadeInterface {
 
     private String makeGetRequest(String url) throws IOException {
         HttpURLConnection connection;
-        try {
-            URL urlString = new URL(url);
-            connection = (HttpURLConnection) urlString.openConnection();
-            connection.setRequestMethod("GET");
-        } catch (IOException e) {
-            throw new IOException("Invalid URL: " + url);
-        }
+        URL urlString = new URL(url);
+        connection = (HttpURLConnection) urlString.openConnection();
+        connection.setRequestMethod("GET");
+
         StringBuilder sb;
         try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
             sb = new StringBuilder();
@@ -47,25 +44,11 @@ public class Facade implements FacadeInterface {
     }
 
     public String getAttributeValueFromJson(String urlString, String attributeName) throws IllegalArgumentException, IOException {
-        if (urlString == null || urlString.isEmpty()) {
-            throw new IllegalArgumentException("URL cannot be null or empty");
-        } else if (attributeName == null || attributeName.isEmpty()) {
-            throw new IllegalArgumentException("Attribute name cannot be null or empty");
-        } else{
-            String jsonResponse = makeGetRequest(urlString);
-            return parseAttribute(jsonResponse, attributeName);
-        }
+        String jsonResponse = makeGetRequest(urlString);
+        return parseAttribute(jsonResponse, attributeName);
+
     }
 
-    public static void main(String[] args) {
-        Facade facade = new Facade();
-        try {
-            String jokeJson = facade.makeGetRequest("https://api.chucknorris.io/jokes/random");
-            System.out.println(jokeJson);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
 
 

@@ -15,7 +15,7 @@ public class Main {
 
         System.out.println("Testing with another API...");
         try{
-            String joke = facade.getAttributeValueFromJson("https://api.fxratesapi.com/latest", "date");
+            String joke = facade.getAttributeValueFromJson("https://api.fxratesapi.com/latest", "base");
             System.out.println(joke);
         } catch (IllegalArgumentException | java.io.IOException e) {
             e.printStackTrace();

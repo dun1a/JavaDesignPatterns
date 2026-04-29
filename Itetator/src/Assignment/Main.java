@@ -9,7 +9,7 @@ public class Main {
         SequenceInterface sequence = new FibonacciSequence();
 
         Iterator<Integer> iterator = sequence.iterator();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println(iterator.next());
         }
     }
