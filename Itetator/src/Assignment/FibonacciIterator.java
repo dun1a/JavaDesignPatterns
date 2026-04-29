@@ -5,23 +5,23 @@ import java.util.Iterator;
 // is a concrete iterator that implements the Iterator interface and provides the logic to iterate through the Fibonacci sequence
 public class FibonacciIterator implements Iterator<Integer> {
 
-    private FibonacciSequence current;
+    private FibonacciSequence sequence;
 
-    private int a = 0, b = 1;
+    private int prev = 0, current = 1;
 
     public FibonacciIterator(FibonacciSequence sequence) {
-        this.current = sequence;
+        this.sequence = sequence;
     }
     @Override
     public boolean hasNext() {
-        return current != null;
+        return sequence != null;
     }
 
     @Override
     public Integer next() {
-        int next = a + b;
-        a = b;
-        b = next;
-        return a;
+        int next = prev + current;
+        prev = current;
+        current = next;
+        return prev;
     }
 }

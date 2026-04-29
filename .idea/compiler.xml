@@ -14,6 +14,7 @@
         <module name="Decorator" />
         <module name="Memento" />
         <module name="Proxy" />
+        <module name="Command" />
         <module name="Singleton" />
         <module name="State" />
         <module name="Observer" />
